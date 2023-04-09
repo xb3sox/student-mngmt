@@ -6,7 +6,7 @@ import studentController from '../controllers/studentController.js'; // import s
 const router = express.Router(); // create router
 
 // routes for student management
-router.get('/', studentController.getAllStudents); // get all students
+router.get('/students', studentController.getAllStudents); // get all students
 router.get('/student/:id', studentController.getStudentById); // get student by id
 router.post('/student', studentController.createStudent); // create student
 router.put('/student/:id', studentController.updateStudent); // update student

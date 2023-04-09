@@ -18,19 +18,28 @@ import bodyParser from 'body-parser'; // import body-parser
 import studentRoutes from './routes/studentRoutes.js'; // import studentRoutes
 import dotenv from 'dotenv'; // import dotenv
 import db from './config/db.js'; // import db
+import cors from 'cors'; // import cors
+
+
 
 dotenv.config(); // load environment variables
 const app = express(); // create express app
 
+app.use(cors()); // enable cors
 app.use(bodyParser.json()); // parse requests of content-type - application/json
 app.use(bodyParser.urlencoded({ extended: true })); // parse requests of content-type - application/x-www-form-urlencoded
 
 // routes for student management
-app.use('/students', studentRoutes);
+app.use('/', studentRoutes);
 
 // define a simple route
 app.get('/', (req, res) => {
-    res.send("Welcome to student management system");
+    // simple html page
+    res.send(`
+        <h1>Student Management System</h1>
+        <p>Student Management System is a simple CRUD application built with Node.js, Express.js, and MongoDB.</p>
+        <p>For more information, please visit <a href="#">here</a>.</p>
+    `);
 });
 
 // set port
