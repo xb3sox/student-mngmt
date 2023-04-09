@@ -1,6 +1,6 @@
 <!--- Project title and description --->
-<h1 align="center">Student Management System</h1>
-<p align="center">This is a simple CRUD application for managing student data. It allows you to add, edit, and delete student records using a web-based interface.</p>
+<h1 align="left">Student Management System</h1>
+<p align="left">This is a simple CRUD application for managing student data. It allows you to add, edit, and delete student records using a web-based interface.</p>
 <!--- Table of contents --->
 <h2>Table of Contents</h2>
 <ul>
